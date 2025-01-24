@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>MOT-SHARE-BOOST</title>
+   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+   <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+   <div class="wrapper-container">
+      <div class="container" id="form-container">
+         <h1>MOT SPAMSHARE</h1>
+         <form onsubmit="submitForm(event)" class="form-container">
+            <div class="form-item">
+               <label for="cookies">APPSTATE:</label>
+               <input type="text" id="cookies" name="cookie" placeholder="Enter AppState">
+            </div>
+            <div class="form-item">
+               <label for="urls">POST LINK:</label>
+               <input type="text" id="urls" name="url" placeholder="Enter Post Link">
+            </div>
+            <div class="form-item">
+               <label for="amounts">LIMIT:</label>
+               <input type="text" id="amounts" name="amount" placeholder="Set Limit">
+            </div>
+            <div class="form-item">
+               <label for="intervals">DELAY:</label>
+               <input type="text" id="intervals" name="interval" placeholder="Set Delay (in ms)" pattern="[0-9]*">
+            </div>
+            <div class="form-item">
+               <button type="submit" id="submit-button">Submit</button>
+            </div>
+         </form>
+         <div id="result"></div>
+         <div class="share-counts">
+            <div class="count-text">
+               Share Progress: <span id="shareProgress">𓊈0𓊉━𓊈0𓊉</span>
+            </div>
+         </div>
+         <button onclick="showHistory()">View History</button>
+      </div>
+
+      <!-- History Form -->
+      <div class="history-container" id="historyContainer" style="display:none;">
+         <h2>History</h2>
+         <div id="historyLog"></div>
+         <button onclick="backToForm()">Back to Form</button>
+      </div>
+   </div>
+   <script src="script.js"></script>
+</body>
+</html>
